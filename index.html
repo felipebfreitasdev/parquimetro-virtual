@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parquímetro Virtual</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <main class="main-container">
+      <header class="brand">
+        <div class="brand-content">
+          <img
+            class="parking-icon"
+            src="/Programação com Javascript/Programação Orientada a Objetos/Pratique/Imagens/Parking Icon.svg"
+            alt="Ícone de estacionamento"
+          />
+
+          <div class="brand-text">
+            <h1 class="brand-title">Parquímetro Virtual</h1>
+            <p class="header-description">
+              Descubra quanto tempo você pode estacionar de acordo com o valor
+              inserido.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <section class="plans-section">
+        <div class="section-heading">
+          <h2 class="section-title">Escolha um plano de estacionamento</h2>
+          <p class="section-description">
+            Selecione um plano, insira o pagamento e veja o tempo permitido e o
+            troco.
+          </p>
+        </div>
+
+        <div class="plans-list">
+          <button class="plan-card-basic" type="button" data-plano="basico">
+            <div class="plan-header">
+              <img
+                class="clock-icon"
+                src="/Programação com Javascript/Programação Orientada a Objetos/Pratique/Imagens/Clock Icon.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="plan-name">Plano Básico</span>
+            </div>
+
+            <div class="plan-details">
+              <strong class="plan-price">R$ 1,00</strong>
+              <span class="plan-duration">30 minutos</span>
+            </div>
+          </button>
+
+          <button class="plan-card-standard" type="button" data-plano="padrao">
+            <div class="plan-header">
+              <img
+                class="clock-icon"
+                src="/Programação com Javascript/Programação Orientada a Objetos/Pratique/Imagens/Clock Icon.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="plan-name">Plano Padrão</span>
+            </div>
+
+            <div class="plan-details">
+              <strong class="plan-price">R$ 1,75</strong>
+              <span class="plan-duration">60 minutos</span>
+            </div>
+          </button>
+
+          <button class="plan-card-complete" type="button" data-plano="completo">
+            <div class="plan-header">
+              <img
+                class="clock-icon"
+                src="/Programação com Javascript/Programação Orientada a Objetos/Pratique/Imagens/Clock Icon.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="plan-name">Plano Completo</span>
+            </div>
+
+            <div class="plan-details">
+              <strong class="plan-price">R$ 3,00</strong>
+              <span class="plan-duration">120 minutos</span>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <section class="payment-section">
+        <div class="payment-form">
+          <label class="payment-label" for="payment-value">
+            Valor do pagamento:
+          </label>
+
+          <div class="payment-actions">
+            <div class="payment-input">
+              <span class="currency-prefix">R$</span>
+
+              <input
+                type="text"
+                class="payment-value"
+                id="payment-value"
+                placeholder="Insira o valor do pagamento"
+                inputmode="decimal"
+                autocomplete="off"
+              />
+            </div>
+
+            <button class="calculate-button" type="button">
+              <img
+                class="calculator-icon"
+                src="/Programação com Javascript/Programação Orientada a Objetos/Pratique/Imagens/Calculator Icon.svg"
+                alt=""
+                aria-hidden="true"
+              />
+
+              <span class="button-text"> Calcular permanência</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="result-section" aria-live="polite">
+          <div class="time-result">
+            <img
+              class="clock-icon"
+              src="/Programação com Javascript/Programação Orientada a Objetos/Pratique/Imagens/Clock Icon.svg"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div class="time-information">
+              <span class="time-label">Tempo permitido</span>
+              <strong class="time-value">-- minutos</strong>
+            </div>
+          </div>
+
+          <div class="result-divider"></div>
+
+          <div class="change-result">
+            <img
+              class="coins-icon"
+              src="/Programação com Javascript/Programação Orientada a Objetos/Pratique/Imagens/Coins Icon.svg"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div class="change-information">
+              <span class="change-label">Troco</span>
+              <strong class="change-value">R$ --</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
